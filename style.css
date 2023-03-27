@@ -1,0 +1,91 @@
+/*Root*/
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --darkcyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --vdarkblue: hsl(212, 21%, 14%);
+  --darkgrayblue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--cream);
+  min-height: 100vh;
+display: grid;
+  place-content: center;
+  
+}
+
+/*Mobile - 375px*/
+
+main { min-height: 100vh;
+  max-width: 400px;
+margin: 30px auto;}
+
+.product-bg { display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 5% 10% 10% 5% 10%;
+  background: var(--white);
+  border-radius: 15px;
+  gap: 5% 2%;
+  align-items: center;
+  grid-template-areas:
+    "."
+    "."
+    "."
+    "."
+    "."
+    ".";
+  width: 90%;
+ height: 60em;
+}
+
+  .product-image {width: 100%; height: 100%;background-image: url("https://github.com/hannyfish/hanny_productcomponent/blob/main/image-product-mobile.jpg?raw=true"); background-size: cover; object-fit: cover;
+  border-radius: 15px 15px 0 0;}
+  
+  .product-cat {width: 90%; color: hsla(228, 12%, 48%,90%); letter-spacing: 5px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; padding: 0px 30px;}
+  
+  .product-title {font-family: 'Fraunces', sans-serif; font-weight: 700; color: var(--vdarkblue); font-size: 30px; width: 80%;padding: 0px 30px;}
+  
+  .product-sum {color:hsla(228, 12%, 48%,90%); font-size: 14px; font-family: 'Montserrat', sans-serif; width: 80%;padding: 0px 30px;}
+  
+  .product-price {color: var(--darkcyan); font-family: 'Fraunces', sans-serif; font-weight: 700; font-size: 30px;padding: 0px 30px;}
+  .product-price s {color: hsla(228, 12%, 48%,70%); font-size: 14px;}
+  
+  .product-button {width: 90%; height: 60%; background: var(--darkcyan); color: var(--white); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; text-decoration: none; margin-left: 15px;}
+  .product-button:hover {background: var(--darkgrayblue);}
+  .product-button::before {content: url("https://raw.githubusercontent.com/hannyfish/hanny_productcomponent/c4b89bb61848914107f33fb14282c07b8570d991/icon-cart.svg") ;}
+
+
+
+
+/*Desktop - 1440px*/
+@media screen and (min-width: 900px) {
+  main {
+    min-width: 900px;
+    min-height: 50vh;
+    margin: 0 auto;
+  }
+  
+  .product-bg {height: 500px; width: 80%; background-color: var(--white); border-radius: 10px;
+display: grid;
+grid-template-columns: 50% 40%;
+grid-template-rows: 10% 20% 20% 10% 20%;
+gap: 5% 5%;}
+  
+ 
+  .product-image {grid-column-start: 1; width: 100%; background-image: url("https://github.com/hannyfish/hanny_productcomponent/blob/main/image-product-desktop.jpg?raw=true");grid-row-start: 1; grid-row-end: 6;
+  border-radius: 15px 0 0 15px;}
+  
+.product-cat {width: 90%;padding: 30px 0px;}
+  
+  .product-title { width: 100%;padding: 30px 0px;}
+  
+  .product-sum {padding: 30px 0px; width: 100%;}
+  
+  .product-price {width: 90%;padding: 30px 0px;}
+  
+    .product-button {width: 100%; height: 50%;  margin:0;}
+
+}
